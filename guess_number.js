@@ -20,11 +20,6 @@ function check_number(id)
 {
     if(guess_num > 0){
         guess_num--;
-        if(id == number){    
-            document.getElementById(id).style.backgroundColor="green";
-            console.dir("Found");
-            document.getElementById("num_result").value = "Congrats! You guessed the number!";
-        }
         if(id > number){    
             document.getElementById(id).style.backgroundColor="red";
             for (var index = id ; index <= 25 ; index++){
@@ -47,6 +42,11 @@ function check_number(id)
         } else {
             document.getElementById("guesses_left").value = guess_num;
             document.getElementById("num_result").value = "No more guesses allowed...";
+        }
+        if(id == number){    
+            document.getElementById(id).style.backgroundColor="green";
+            console.dir("Found");
+            document.getElementById("num_result").value = "Congrats! You guessed the number!";
         }
     }
 }
