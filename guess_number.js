@@ -15,6 +15,7 @@ function check_number(id)
     if(id == number){    
         document.getElementById(id).style.backgroundColor="green";
         console.dir("Found");
+        document.getElementById("num_result").value = "Congrats! You guessed the number!";
     }
     if(id > number){    
         document.getElementById(id).style.backgroundColor="red";
@@ -22,6 +23,7 @@ function check_number(id)
             document.getElementById(index).style.backgroundColor="red";
         }
         console.dir("The number is lower");
+        document.getElementById("num_result").value = "The number is lower";
     }
     
     if(id < number){    
@@ -30,6 +32,7 @@ function check_number(id)
             document.getElementById(index).style.backgroundColor="red";
         }
         console.dir("The number is higher");
+        document.getElementById("num_result").value = "The number is higher";
     }
 }
 
