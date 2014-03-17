@@ -42,6 +42,11 @@ function check_number(id)
             console.dir("The number is higher");
             document.getElementById("num_result").value = "The number is higher";
         }
-        document.getElementById("guesses_left").value = guess_num;
+        if(guess_num > 0) {
+            document.getElementById("guesses_left").value = guess_num;
+        } else {
+            document.getElementById("guesses_left").value = guess_num;
+            document.getElementById("num_result").value = "No more guesses allowed...";
+        }
     }
 }
