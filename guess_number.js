@@ -21,20 +21,20 @@ function check_number(id)
 {
     if(guess_num > 0){
         guess_num--;
-        if(id > number){    
-            document.getElementById(id).style.backgroundColor="red";
+        if(id > number){
             for (var index = id ; index <= max ; index++){
-                document.getElementById(index).style.backgroundColor="red";
+                var element = document.getElementById(index);
+                element.classList.add("btn-danger");
                 document.getElementById(index).disabled = true; 
             }
             console.dir("The number is lower");
             document.getElementById("num_result").value = "The number is lower";
         }
     
-        if(id < number){    
-            document.getElementById(id).style.backgroundColor="red";
+        if(id < number){;
             for (var index = id ; index > 0 ; index--){
-                document.getElementById(index).style.backgroundColor="red";
+                var element = document.getElementById(index);
+                element.classList.add("btn-danger");
                 document.getElementById(index).disabled = true; 
             }
             console.dir("The number is higher");
@@ -51,7 +51,8 @@ function check_number(id)
             }
         }
         if(id == number){    
-            document.getElementById(id).style.backgroundColor="green";
+            var element = document.getElementById(id);
+            element.classList.add("btn-success");
             console.dir("Found");
             document.getElementById("num_result").value = "Congrats! You guessed the number!";
             for (var index = max ; index > 0 ; index--){

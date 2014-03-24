@@ -5,110 +5,109 @@
         <title>Javascript Calculator</title>
         <script type="text/javascript" src="guess_number.js"></script>
         <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="guess_number.css" />
+        <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="css/bootstrap.css" />
     </head>
-    <body>
-        <table class="grid" id="grid">
+    <body class="game_page">
+        <table class="ResultViewClass game" id="grid" disabled="disabled">
             <tr>
-                <td colspan="5" class="calc_td_result">
-                    <input type="text" readonly="readonly" name="calc_result" id="num_result" class="calc_result" />
-                </td>
-            </tr>
-            <tr>
-                <td class="calc_td_btn">
-                        <input type="button" id="1" class="calc_btn" value="1" onclick="javascript:check_number(1);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="2" class="calc_btn" value="2" onclick="javascript:check_number(2);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="3" class="calc_btn" value="3" onclick="javascript:check_number(3);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="4" class="calc_btn" value="4" onclick="javascript:check_number(4);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="5" class="calc_btn" value="5" onclick="javascript:check_number(5);" />
-                </td>
-            </tr>
-            <tr>
-                <td class="calc_td_btn">
-                        <input type="button" id="6" class="calc_btn" value="6" onclick="javascript:check_number(6);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="7" class="calc_btn" value="7" onclick="javascript:check_number(7);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="8" class="calc_btn" value="8" onclick="javascript:check_number(8);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="9" class="calc_btn" value="9" onclick="javascript:check_number(9);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="10" class="calc_btn" value="10" onclick="javascript:check_number(10);" />
-                </td>
-            </tr>
-                        <tr>
-                <td class="calc_td_btn">
-                        <input type="button" id="11" class="calc_btn" value="11" onclick="javascript:check_number(11);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="12" class="calc_btn" value="12" onclick="javascript:check_number(12);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="13" class="calc_btn" value="13" onclick="javascript:check_number(13);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="14" class="calc_btn" value="14" onclick="javascript:check_number(14);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="15" class="calc_btn" value="15" onclick="javascript:check_number(15);" />
-                </td>
-            </tr>
-            <tr>
-                <td class="calc_td_btn">
-                        <input type="button" id="16" class="calc_btn" value="16" onclick="javascript:check_number(16);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="17" class="calc_btn" value="17" onclick="javascript:check_number(17);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="18" class="calc_btn" value="18" onclick="javascript:check_number(18);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="19" class="calc_btn" value="19" onclick="javascript:check_number(19);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="20" class="calc_btn" value="20" onclick="javascript:check_number(20);" />
-                </td>
-            </tr>
-            <tr>
-                <td class="calc_td_btn">
-                        <input type="button" id="21" class="calc_btn" value="21" onclick="javascript:check_number(21);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="22" class="calc_btn" value="22" onclick="javascript:check_number(22);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="23" class="calc_btn" value="23" onclick="javascript:check_number(23);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="24" class="calc_btn" value="24" onclick="javascript:check_number(24);" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="25" class="calc_btn" value="25" onclick="javascript:check_number(25);" />
-                </td>
-            </tr>
-            <tr>
-                <td class="calc_td_btn">
-                        Guesses left:
-                </td>
-                <td class="calc_td_btn">
-                        <input type="text" readonly="readonly" name="guesses" id="guesses_left" class="calc_result" />
-                </td>
-                <td class="calc_td_btn">
-                        <input type="button" id="game_reset" value="Restart" onclick="javascript:reset_game();" />
+                <td class="display_box">
+                    <input type="text" class="result_display" id="num_result" />
                 </td>
             </tr>
         </table>
+        <table class="GridViewClass game">
+            <tr>
+                <td>
+                        <input type="button" id="1" class="btn btn-block" value="1" onclick="javascript:check_number(1);" />
+                </td>
+                <td>
+                        <input type="button" id="2" class="btn btn-block" value="2" onclick="javascript:check_number(2);" />
+                </td>
+                <td>
+                        <input type="button" id="3" class="btn btn-block" value="3" onclick="javascript:check_number(3);" />
+                </td>
+                <td>
+                        <input type="button" id="4" class="btn btn-block" value="4" onclick="javascript:check_number(4);" />
+                </td>
+                <td>
+                        <input type="button" id="5" class="btn btn-block" value="5" onclick="javascript:check_number(5);" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" id="6" class="btn btn-block" value="6" onclick="javascript:check_number(6);" />
+                </td>
+                <td>
+                        <input type="button" id="7" class="btn btn-block" value="7" onclick="javascript:check_number(7);" />
+                </td>
+                <td>
+                        <input type="button" id="8" class="btn btn-block" value="8" onclick="javascript:check_number(8);" />
+                </td>
+                <td>
+                        <input type="button" id="9" class="btn btn-block" value="9" onclick="javascript:check_number(9);" />
+                </td>
+                <td>
+                        <input type="button" id="10" class="btn btn-block" value="10" onclick="javascript:check_number(10);" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" id="11" class="btn btn-block" value="11" onclick="javascript:check_number(11);" />
+                </td>
+                <td>
+                        <input type="button" id="12" class="btn btn-block" value="12" onclick="javascript:check_number(12);" />
+                </td>
+                <td>
+                        <input type="button" id="13" class="btn btn-block" value="13" onclick="javascript:check_number(13);" />
+                </td>
+                <td>
+                        <input type="button" id="14" class="btn btn-block" value="14" onclick="javascript:check_number(14);" />
+                </td>
+                <td>
+                        <input type="button" id="15" class="btn btn-block" value="15" onclick="javascript:check_number(15);" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" id="16" class="btn btn-block" value="16" onclick="javascript:check_number(16);" />
+                </td>
+                <td>
+                        <input type="button" id="17" class="btn btn-block" value="17" onclick="javascript:check_number(17);" />
+                </td>
+                <td>
+                        <input type="button" id="18" class="btn btn-block" value="18" onclick="javascript:check_number(18);" />
+                </td>
+                <td>
+                        <input type="button" id="19" class="btn btn-block" value="19" onclick="javascript:check_number(19);" />
+                </td>
+                <td>
+                        <input type="button" id="20" class="btn btn-block" value="20" onclick="javascript:check_number(20);" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="button" id="21" class="btn btn-block" value="21" onclick="javascript:check_number(21);" />
+                </td>
+                <td>
+                        <input type="button" id="22" class="btn btn-block" value="22" onclick="javascript:check_number(22);" />
+                </td>
+                <td>
+                        <input type="button" id="23" class="btn btn-block" value="23" onclick="javascript:check_number(23);" />
+                </td>
+                <td>
+                        <input type="button" id="24" class="btn btn-block" value="24" onclick="javascript:check_number(24);" />
+                </td>
+                <td>
+                        <input type="button" id="25" class="btn btn-block" value="25" onclick="javascript:check_number(25);" />
+                </td>
+            </tr>
+        </table>
+        <div class="reset_game">
+            <p class="testing">
+                Guesses left:
+                <input type="text" readonly="readonly" name="guesses" id="guesses_left" class="guesses_left" />
+                <button type="button" id="game_reset" class="btn btn-default reset_btn" onclick="javascript:reset_game();">Restart</button>
+            </p>
+        </div>
     </body>
 </html>
